@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>一个五年嵌入式工程师在 AI 时代的思考 | 永鑫的技术博客</title><meta name="author" content="永鑫"><meta name="copyright" content="永鑫"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一个五年嵌入式工程师在 AI 时代使用 Codex 和 GPT 后，对程序员能力、学习方式和个人创作边界的重新思考。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个五年嵌入式工程师在 AI 时代的思考">
+<meta property="og:url" content="https://byxhouhou.github.io/2026/05/28/embedded-engineer-ai-era-thinking/index.html">
+<meta property="og:site_name" content="永鑫的技术博客">
+<meta property="og:description" content="一个五年嵌入式工程师在 AI 时代使用 Codex 和 GPT 后，对程序员能力、学习方式和个人创作边界的重新思考。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://byxhouhou.github.io/img/butterfly-icon.png">
+<meta property="article:published_time" content="2026-05-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-28T03:52:09.204Z">
+<meta property="article:author" content="永鑫">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="Codex">
+<meta property="article:tag" content="嵌入式">
+<meta property="article:tag" content="思考">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://byxhouhou.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "一个五年嵌入式工程师在 AI 时代的思考",
+  "url": "https://byxhouhou.github.io/2026/05/28/embedded-engineer-ai-era-thinking/",
+  "image": "https://byxhouhou.github.io/img/butterfly-icon.png",
+  "datePublished": "2026-05-27T16:00:00.000Z",
+  "dateModified": "2026-05-28T03:52:09.204Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "永鑫",
+      "url": "https://byxhouhou.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://byxhouhou.github.io/2026/05/28/embedded-engineer-ai-era-thinking/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '一个五年嵌入式工程师在 AI 时代的思考',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">永鑫的技术博客</span></a><a class="nav-page-title" href="/"><span class="site-name">一个五年嵌入式工程师在 AI 时代的思考</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">一个五年嵌入式工程师在 AI 时代的思考</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-05-27T16:00:00.000Z" title="发表于 2026-05-28 00:00:00">2026-05-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-28T03:52:09.204Z" title="更新于 2026-05-28 11:52:09">2026-05-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%B8%AA%E4%BA%BA%E6%80%9D%E8%80%83/">个人思考</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>最近使用了很火的 Codex，很颠覆我的认知。原来自己可能需要 1-2 个月完成的编码工作，它只需要不到半天就可以完成，并且完成得比我还要优秀。</p>
+<p>原来公司所看重的代码，现在是只需要你知道基本架构，便可以让 AI 帮助你生成。这个时代对于程序员而言，真正重要的是了解整体架构、了解上下游数据交互、了解具体的业务逻辑。</p>
+<p>我感觉到一种被解放的感觉，因为我终于不用再为了一个循环的边界条件、一个入参长度而去花费自己半天的时间了。我有了大量的时间学习原来我感兴趣但是没有时间的领域，而 AI 则可以帮助我更快地梳理出知识体系。我很喜欢把自己的理解讲给 AI 去听，然后让它来纠正我，这样子学习的效率十分高效。</p>
+<p>我是一个嵌入式开发，平时不会接触网页、UI、美术等等诸多方面的内容，但是在 Codex 的帮助下，我自己独立完成了小程序开发、网页制作、简单的游戏 demo 等等，当然 token 也还挺贵的（笑）。</p>
+<p>原来拦在我面前的是不同编程语言的差异、开发环境的搭建、对陌生知识的畏惧。但是现在这些都已经被 AI 给消解了，我可以自由地实现自己的创意和想法，而不是仅仅局限在单片机这一个小的细分领域。</p>
+<p>这真是一种人的全面发展。而且我还可以把自己的内容输入到 AI，让它帮我生成视频。我不仅仅是个程序员，还可以是个视频制作者、图像制作者、音乐制作者等等。在 AI 时代，只要你想，你便可以成为。知识在 AI 时代是免费的，而真正宝贵的是你的注意力，你要选择你想要专注什么领域。我现在每天高强度使用 AI，最大的感受就是自己的时间不够用。</p>
+<p>回到 GPT 的使用，最近这几个月是我个人认知成长速度最快的几年。每天的高强度提问，让我了解了社会学、经济学、心理学等多个领域的内容。这些原来都是理工科的我所欠缺的，每天学到不同领域新的知识，再把它融入自己的知识架构，真的很快乐。</p>
+<p>文理之争本就是社会根据所学知识分工所形成的产物。知识是用来描述世界、描述某个规律或者现象的，不应该简单粗暴地使用文理来区分。</p>
+<p>我真的很建议不同学科的人去涉猎很多其他陌生的领域，这真的很有趣！</p>
+<p>难道你不好奇你是怎么被社会观念影响的？计算机是怎么用无数 0 和 1 来构建这个世界的？为什么炒菜放点鸡精能让饭菜增香那么多？</p>
+<p>这个世界需要被我们了解的太多了，而 AI 是你最好的助手。以后所有公开的通用性知识都不再具有获取门槛了，你和各个知识领域大拿之间，可能只差一个跟 AI 的聊天。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://byxhouhou.github.io">永鑫</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://byxhouhou.github.io/2026/05/28/embedded-engineer-ai-era-thinking/">https://byxhouhou.github.io/2026/05/28/embedded-engineer-ai-era-thinking/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://byxhouhou.github.io" target="_blank">永鑫的技术博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a><a class="post-meta__tags" href="/tags/AI/">AI</a><a class="post-meta__tags" href="/tags/Codex/">Codex</a><a class="post-meta__tags" href="/tags/%E6%80%9D%E8%80%83/">思考</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/05/24/dual-chip-communication/" title="双芯通信学习笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">双芯通信学习笔记</div></div><div class="info-2"><div class="info-item-1">背景待补充：双芯架构、角色划分、通信目标。 通信链路待补充：  UART&#x2F;SPI&#x2F;CAN&#x2F;Ethernet 等链路选择 消息格式 握手与心跳 同步与状态管理 超时与重传  协议设计待补充：帧格式、命令字、序列号、校验、版本兼容。 异常处理待补充：通信中断、重启恢复、数据一致性、降级策略。 总结待补充：设计取舍、调试经验和后续计划。 </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/05/24/dual-chip-communication/" title="双芯通信学习笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-24</div><div class="info-item-2">双芯通信学习笔记</div></div><div class="info-2"><div class="info-item-1">背景待补充：双芯架构、角色划分、通信目标。 通信链路待补充：  UART&#x2F;SPI&#x2F;CAN&#x2F;Ethernet 等链路选择 消息格式 握手与心跳 同步与状态管理 超时与重传  协议设计待补充：帧格式、命令字、序列号、校验、版本兼容。 异常处理待补充：通信中断、重启恢复、数据一致性、降级策略。 总结待补充：设计取舍、调试经验和后续计划。 </div></div></div></a><a class="pagination-related" href="/2026/05/24/power-management/" title="电源管理学习笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-24</div><div class="info-item-2">电源管理学习笔记</div></div><div class="info-2"><div class="info-item-1">背景待补充：系统电源架构、功耗目标、应用场景。 电源架构待补充：  电源输入与保护 DC&#x2F;DC 与 LDO 电源域划分 唤醒源 上电&#x2F;下电时序  软件策略待补充：睡眠模式、外设关闭、时钟切换、状态机设计。 测试与问题待补充：功耗测试方法、异常掉电、唤醒失败、时序问题。 总结待补充：设计原则、项目经验和后续优化。 </div></div></div></a><a class="pagination-related" href="/2026/05/24/mcu-low-level-driver/" title="MCU 底层驱动开发笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-24</div><div class="info-item-2">MCU 底层驱动开发笔记</div></div><div class="info-2"><div class="info-item-1">背景待补充：目标 MCU 平台、开发环境、驱动范围。 驱动结构待补充：  芯片启动流程 时钟与复位 GPIO UART&#x2F;SPI&#x2F;I2C ADC&#x2F;PWM&#x2F;Timer DMA 与中断  关键实现待补充：寄存器配置、初始化流程、错误处理、接口封装。 调试记录待补充：示波器&#x2F;逻辑分析仪使用、日志、常见问题定位。 总结待补充：可复用经验和下一步优化。 </div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">永鑫</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/28/embedded-engineer-ai-era-thinking/" title="一个五年嵌入式工程师在 AI 时代的思考">一个五年嵌入式工程师在 AI 时代的思考</a><time datetime="2026-05-27T16:00:00.000Z" title="发表于 2026-05-28 00:00:00">2026-05-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/24/dual-chip-communication/" title="双芯通信学习笔记">双芯通信学习笔记</a><time datetime="2026-05-24T15:56:00.000Z" title="发表于 2026-05-24 23:56:00">2026-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/24/power-management/" title="电源管理学习笔记">电源管理学习笔记</a><time datetime="2026-05-24T15:55:00.000Z" title="发表于 2026-05-24 23:55:00">2026-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/24/mcu-low-level-driver/" title="MCU 底层驱动开发笔记">MCU 底层驱动开发笔记</a><time datetime="2026-05-24T15:54:00.000Z" title="发表于 2026-05-24 23:54:00">2026-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/24/freertos/" title="FreeRTOS 学习笔记">FreeRTOS 学习笔记</a><time datetime="2026-05-24T15:52:00.000Z" title="发表于 2026-05-24 23:52:00">2026-05-24</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 永鑫</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
