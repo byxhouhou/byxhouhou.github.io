@@ -42,15 +42,17 @@ a {
 
 #page-header.full_page #site-info {
   top: 42%;
+  left: 50%;
   width: min(1180px, calc(100% - 48px));
   padding: 0;
-  text-align: left;
+  text-align: center;
   transform: translate(-50%, -50%);
 }
 
 #site-title {
   width: min(100%, 900px);
   max-width: 900px;
+  margin-inline: auto;
   font-size: 72px !important;
   font-weight: 750;
   line-height: 1.08;
@@ -62,16 +64,17 @@ a {
 #site-subtitle {
   width: min(100%, 720px);
   margin-top: 20px;
+  margin-inline: auto;
   max-width: 720px;
   font-size: 20px !important;
   line-height: 1.6;
-  text-align: left;
+  text-align: center;
   overflow-wrap: anywhere;
 }
 
 #site_social_icons {
   margin-top: 26px;
-  text-align: left;
+  text-align: center;
 }
 
 #site_social_icons .social-icon {
